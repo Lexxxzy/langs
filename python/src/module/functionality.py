@@ -1,4 +1,4 @@
-GLOBAL_VAR = "I am a global variable"
+GLOBAL_VAR = "I am changed global variable"
 
 
 def global_function():
