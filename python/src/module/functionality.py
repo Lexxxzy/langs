@@ -13,7 +13,7 @@ class MyClass:
         self.instance_variable = instance_variable
 
     def display_instance_variable(self):
-        print(f"Instance Variable: {self.instance_variable}")
+        print(f"Instance Variable Updated: {self.instance_variable}")
 
     @classmethod
     def display_class_variable(cls):
