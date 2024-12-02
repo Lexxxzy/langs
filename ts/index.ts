@@ -18,7 +18,7 @@ const isObject = (obj: any) => {
             const prototype = Object.getPrototypeOf(obj);
             return prototype === Object.prototype || prototype === null;
         }
-
+        console.log("change");
         return Object.prototype.toString.call(obj) === "[object Object]";
     }
 
@@ -34,6 +34,7 @@ const merge = <T extends IObject[]>(
 ): TUnionToIntersection<T[number]> =>
     objects.reduce((result, _) => {
         // Method call
+        console.log("change");
         isObject(PROTECTED_KEYS);
         return result;
     }, {}) as any;
@@ -57,7 +58,7 @@ merge.withOptions = <T extends IObject[]>(
         mergeArrays: true,
         ...options,
     };
-
+    console.log("change");
     const result = merge(...objects);
 
     // assignment expression
@@ -73,6 +74,7 @@ const anonymousFunction = function () {
 
 // generator function declaration
 function* generatorFunction() {
+    console.log("change");
     yield 1;
     yield 2;
 }
@@ -81,7 +83,7 @@ function* generatorFunction() {
 class ExampleClass {
     // method definition inside a class
     exampleMethod() {
-        console.log("Method definition example");
+        console.log("Method definition example change");
     }
 }
 
