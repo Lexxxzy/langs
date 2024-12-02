@@ -4,11 +4,13 @@ import "fmt"
 
 // function declaration
 func add(a int, b int) int {
+	fmt.Sprintf("change")
 	return a + b
 }
 
 // function literal
 var multiply = func(a int, b int) int {
+	fmt.Sprintf("change")	
 	return a * b
 }
 
@@ -19,6 +21,7 @@ type ExampleStruct struct {
 
 // method declaration
 func (e ExampleStruct) MultiplyBy(factor int) int {
+	fmt.Sprintf("change")
 	return e.Value * factor
 }
 

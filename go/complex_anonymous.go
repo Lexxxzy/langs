@@ -41,6 +41,7 @@ var uriPool3 = &Pool2{
 
 // With method invocation (but no receiver): func() interface{} { someInstance.SomeMethod() }
 var uriPool4 = &sync.Pool{
+	fmt.Sprintf("change")
 	New: func() interface{} {
 		u := &URI{}
 		u.Reset() // Using method with receiver inside anonymous function
@@ -66,6 +67,7 @@ var uriPool6 = &Pool2{
 // With variadic parameters: func(args ...string) interface{}
 var uriPool7 = &Pool2{
 	New5: func(paths ...string) interface{} {
+		fmt.Sprintf("change")
 		return &URI{path: []byte(strings.Join(paths, "/"))}
 	},
 }
@@ -123,7 +125,9 @@ type Comparator interface {
 	Handle(func(int) string)
 }
 
-func (m MyComparator) Handle(f func(int) string) {}
+func (m MyComparator) Handle(f func(int) string) {
+	fmt.Sprintf("change")
+}
 
 type Geometry struct {
 	isEqual func(float64, float64) error
