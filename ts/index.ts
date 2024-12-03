@@ -13,6 +13,7 @@ type TUnionToIntersection<U> = (
 
 // function declaration
 const isObject = (obj: any) => {
+    const function_scope_var = "I am function scope var"
     if (typeof obj === "object" && obj !== null) {
         if (typeof Object.getPrototypeOf === "function") {
             const prototype = Object.getPrototypeOf(obj);
@@ -26,7 +27,7 @@ const isObject = (obj: any) => {
 };
 
 // const
-const PROTECTED_KEYS = ["__proto__"];
+const PROTECTED_KEYS_GLOBAL = ["__proto__", "__changed__"];
 
 // variable + arrow function
 const merge = <T extends IObject[]>(
@@ -35,7 +36,7 @@ const merge = <T extends IObject[]>(
     objects.reduce((result, _) => {
         // Method call
         console.log("change");
-        isObject(PROTECTED_KEYS);
+        isObject(PROTECTED_KEYS_GLOBAL);
         return result;
     }, {}) as any;
 
@@ -69,7 +70,8 @@ merge.withOptions = <T extends IObject[]>(
 
 // function expression
 const anonymousFunction = function () {
-    console.log("Anonymous function example");
+    let anon_func_variable = "func scope variable"
+    console.log(`Anonymous function example ${anon_func_variable}`);
 };
 
 // generator function declaration
@@ -81,6 +83,7 @@ function* generatorFunction() {
 
 // class declaration
 class ExampleClass {
+    private _class_scope_var: boolean = false;
     // method definition inside a class
     exampleMethod() {
         console.log("Method definition example change");
