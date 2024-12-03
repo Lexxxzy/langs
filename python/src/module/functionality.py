@@ -1,4 +1,4 @@
-GLOBAL_VAR = "I am changed global variable"
+GLOBAL_VAR = "I am global variable"
 
 
 def global_function():
@@ -7,12 +7,13 @@ def global_function():
 
 
 class MyClass:
-    class_variable = "I am a class variable"
+    class_variable = "I am changed class variable"
 
     def __init__(self, instance_variable):
         self.instance_variable = instance_variable
 
     def display_instance_variable(self):
+        function_variable = "I am new function scope variable" 
         print(f"Instance Variable Updated: {self.instance_variable}")
 
     @classmethod
