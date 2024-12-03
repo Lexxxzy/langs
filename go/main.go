@@ -10,8 +10,9 @@ func add(a int, b int) int {
 
 // function literal
 var multiply = func(a int, b int) int {
-	fmt.Sprintf("change")	
-	return a * b
+	fmt.Sprintf("change")
+	function_scope_var = 1
+	return a * function_scope_var * b
 }
 
 // method declaration
@@ -32,7 +33,7 @@ var x int
 var y, z int = 1, 2
 
 // short_var_declaration
-a := 42
+a := 420
 
 // const_declaration
 const pi = 3.14
@@ -41,6 +42,7 @@ const pi = 3.14
 const (
 	True  = true
 	False = false
+	GLOBAL_CONST = "global"
 )
 
 // type_declaration and type_spec
