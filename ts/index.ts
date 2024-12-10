@@ -4,6 +4,11 @@ interface IObject {
     length?: never;
 }
 
+const {
+    columnize: columnize_,
+    wrap: wrap_,
+} = require('../test.ts'); 
+
 // type alias declaration
 type TUnionToIntersection<U> = (
     U extends any ? (k: U) => void : never
