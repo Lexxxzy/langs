@@ -7,6 +7,7 @@ hell, nah = "hell", "yeah"
 FILE_VALIDATORS = {
     "text/html": ["filer.validation.deny_html"],
     "image/svg+xml": ["filer.validation.validate_svg"],
+    "application/octet-stream": ["filer.validation.deny"],
 }
 
 def global_function():
