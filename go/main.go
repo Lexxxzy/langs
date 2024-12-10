@@ -42,7 +42,7 @@ const pi = 3.14
 const (
 	True  = true
 	False = false
-	GLOBAL_CONST = "global"
+	GLOBAL_CONST = "global changed"
 )
 
 // type_declaration and type_spec
