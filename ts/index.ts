@@ -7,7 +7,7 @@ interface IObject {
 const {
     columnize: columnize_,
     wrap: wrap_,
-} = require('../test.ts'); 
+} = require('../../test.ts'); 
 
 // type alias declaration
 type TUnionToIntersection<U> = (
