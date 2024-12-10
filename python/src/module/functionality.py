@@ -4,7 +4,10 @@ hell, nah = "hell", "yeah"
 # new comment
 # one more
 
-
+FILE_VALIDATORS = {
+    "text/html": ["filer.validation.deny_html"],
+    "image/svg+xml": ["filer.validation.validate_svg"],
+}
 
 def global_function():
     print("This is a global function.")
