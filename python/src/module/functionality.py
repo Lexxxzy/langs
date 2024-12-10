@@ -1,9 +1,15 @@
-GLOBAL_VAR = "I am global variable"
+GLOBAL_VAR = "I am changed global variable"
+
+hell, nah = "hell", "nah" 
+# new comment
+# one more
+
 
 
 def global_function():
     print("This is a global function.")
     print(GLOBAL_VAR)
+    print(f"{hell} {nah}")
 
 
 class MyClass:
@@ -14,13 +20,12 @@ class MyClass:
 
     def display_instance_variable(self):
         function_variable = "I am new function scope variable"
-        def some_new_inner_function():
-            print(function_variable)
-        some_new_inner_function()
-        print(f"Instance Variable Updated: {self.instance_variable}")
+        print(f"Instance Variable Updated: {function_variable}")
 
     @classmethod
     def display_class_variable(cls):
+        def one_more_change():
+            print("+++")
         print(f"Class Variable: {cls.class_variable}")
 
     @staticmethod
