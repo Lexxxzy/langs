@@ -1,6 +1,6 @@
 GLOBAL_VAR = "I am changed global variable"
 
-hell, nah = "hell", "nah" 
+hell, nah = "hell", "yeah" 
 # new comment
 # one more
 
